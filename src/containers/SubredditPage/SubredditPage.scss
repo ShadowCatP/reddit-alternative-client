@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.subreddit-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $primary-background-color;
+
+  .subreddit-page {
+    width: 1024px;
+  }
+
+}

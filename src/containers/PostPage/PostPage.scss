@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+
+.post-page {
+  display: flex;
+  justify-content: center;
+  background-color: $primary-background-color;
+  min-height: 100vh;
+  color: $primary-text-color;
+
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    width: 1024px;
+    .post-details {
+      padding: 32px;
+    }
+
+    .post-comments {
+      padding: 32px;
+    }
+  }
+}

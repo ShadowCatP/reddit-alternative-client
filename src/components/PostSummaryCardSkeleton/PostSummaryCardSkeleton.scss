@@ -1,0 +1,25 @@
+
+
+.post-summary-card-skeleton {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+
+  .post-header {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+
+    .post-header-text {
+      margin-left: 8px;
+      flex: 1;
+    }
+  }
+
+  .post-stats-skeleton {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    width: 50%;
+  }
+}

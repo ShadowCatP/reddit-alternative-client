@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $primary-background-color;
+
+  .home-page {
+    width: 1024px;
+  }
+}

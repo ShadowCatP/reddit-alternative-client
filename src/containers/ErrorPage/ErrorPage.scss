@@ -1,0 +1,77 @@
+@use "../../styles/variables" as *;
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $primary-background-color;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-container {
+  text-align: center;
+  color: $primary-text-color;
+  max-width: 600px;
+  padding: 40px;
+  border: 1px solid $tertiary-background-color;
+  border-radius: 8px;
+  background-color: $secondary-background-color;
+  position: relative;
+  z-index: 1;
+}
+
+.error-container h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-container p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-buttons button {
+  margin: 0 8px;
+  padding: 10px 20px;
+  background-color: $button-inactive-color;
+  border: none;
+  border-radius: 4px;
+  color: $primary-text-color;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 250ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-buttons button:hover {
+  background-color: $button-active-color;
+}
+
+
+.error-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 2s infinite;
+  z-index: 0;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}

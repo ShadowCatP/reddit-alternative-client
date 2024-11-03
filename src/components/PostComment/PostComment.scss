@@ -1,0 +1,153 @@
+@use "../../styles/variables" as *;
+
+.comment {
+  margin: 16px 0;
+
+  .comment-topbar {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        z-index: 1;
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .placeholder {
+        background: #fff;
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .comment-content {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    position: relative;
+    column-gap: 16px;
+    cursor: pointer;
+
+    .comment-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+      margin-bottom: 8px;
+      height: 100%;
+
+      .line-main {
+        width: 2px;
+        height: 100%;
+        background: $primary-text-color;
+      }
+    }
+
+    .comment-mid-row {
+      display: contents;
+
+      .comment-text {
+        min-width: 0;
+        overflow: hidden;
+      }
+    }
+
+    .comment-bottom-row {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      align-items: center;
+      height: 32px;
+
+      .collapse-button {
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+        position: relative;
+
+        button {
+          background: $secondary-background-color;
+          color: $primary-text-color;
+          border: 2px solid $primary-text-color;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .comment-stats {
+        display: flex;
+        min-width: 0;
+        column-gap: 8px;
+
+        & > div {
+          background-color: $post-stats-background-color;
+          gap: 8px;
+          min-width: 64px;
+          padding: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px / 50%;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .comment-children {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+
+
+    .threadline {
+      position: relative;
+      cursor: pointer;
+
+      .comment-branch {
+        position: absolute;
+        width: 2px;
+        background: $primary-text-color;
+        left: calc(50% - 2px);
+        top: 0;
+        bottom: -16px;
+      }
+
+      .comment-corner {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 2px);
+        height: 32px;
+        border-color: $primary-text-color;
+        z-index: 0;
+        border-style: solid;
+        border-width: 0;
+        min-width: 32px;
+        border-left-width: 2px;
+        border-bottom-width: 2px;
+        border-bottom-left-radius: 12px;
+      }
+    }
+  }
+}

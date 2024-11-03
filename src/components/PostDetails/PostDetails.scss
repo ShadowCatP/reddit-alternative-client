@@ -1,0 +1,92 @@
+@use "../../styles/variables" as *;
+
+.post {
+  display: flex;
+  flex-direction: column;
+
+  .post-header {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+
+    img {
+      width: 32px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+    button {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      left: -36px;
+      background-color: $button-inactive-color;
+      color: $primary-text-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $button-active-color;
+      }
+    }
+
+    .post-header-details {
+      display: flex;
+      flex-direction: column;
+
+      .post-subreddit {
+        display: flex;
+        gap: 12px;
+        font-weight: bold;
+
+        .post-date {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .post-content {
+
+    .post-title {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin: 8px 32px;
+    }
+
+    p {
+      margin: 1rem 0;
+      line-height: 1.5rem;
+    }
+  }
+
+  .post-stats {
+    display: flex;
+    column-gap: 8px;
+    margin-top: 16px;
+
+    & > div {
+      background-color: $post-stats-background-color;
+      gap: 8px;
+      padding: 4px 24px;
+      max-width: 128px;
+      display: flex;
+      justify-content: center;
+      border-radius: 12px / 50%;
+    }
+  }
+}

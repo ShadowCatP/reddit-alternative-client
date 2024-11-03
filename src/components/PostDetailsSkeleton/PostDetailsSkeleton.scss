@@ -1,0 +1,13 @@
+.post-details-skeleton {
+  border-radius: 8px;
+
+  .post-header {
+    display: flex;
+    align-items: center;
+
+    .post-header-text {
+      margin-left: 8px;
+      flex: 1;
+    }
+  }
+}

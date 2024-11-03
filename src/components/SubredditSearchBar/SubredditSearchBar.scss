@@ -1,0 +1,65 @@
+@use "../../styles/variables" as *;
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-background-color;
+  border-bottom: 1px solid $tertiary-background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .home-button {
+    position: absolute;
+    left: 12px;
+
+    button {
+      border: none;
+      background-color: $button-inactive-color;
+      transition: background-color 250ms ease;
+      color: $primary-text-color;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $button-active-color;
+      }
+    }
+  }
+
+  .search-input {
+    display: flex;
+    position: relative;
+    margin: 16px 8px;
+    width: 600px;
+
+    input {
+      width: 100%;
+      padding: 12px 12px 12px 48px;
+      font-size: 1.2rem;
+      outline: none;
+      background-color: $tertiary-background-color;
+      color: $primary-text-color;
+      border: none;
+      border-radius: 24px / 50%;
+    }
+
+    i {
+      color: $primary-text-color;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 16px;
+    }
+
+    .search-subreddit {
+      color: $primary-text-color;
+    }
+  }
+}
