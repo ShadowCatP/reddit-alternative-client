@@ -1,8 +1,8 @@
 import axios from "axios";
 import createAuthRefreshInterceptor from "axios-auth-refresh";
 
-const clientId = process.env.REACT_APP_REDDIT_CLIENT_ID;
-const clientSecret = process.env.REACT_APP_REDDIT_CLIENT_SECRET;
+const clientId = import.meta.env.VITE_CLIENT_ID;
+const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 const authUrl = "https://www.reddit.com/api/v1/access_token";
 
 let accessToken: string | null = null;
