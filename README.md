@@ -16,7 +16,7 @@ then displays them.
 * React: Utilizes React for building the user interface.
 * TypeScript: Ensures type safety and better development experience.
 
-### Instalation
+### Installation
 
 1. Clone the repository:
 
